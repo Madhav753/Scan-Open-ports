@@ -1,10 +1,118 @@
-Task - 1
-Scan for Open Ports using Nmap
+Task – 1
+
+Cybersecurity Intern
+
+Madhav P Rajeev
+
+Madhavrajeev93@gmail.com
+
+Scan for open ports using Nmap
+TCP SYN Scan:
+
+
+C:\Users\Asus>nmap -sS 192.168../24
+Starting Nmap 7.98 ( https://nmap.org ) at 2025-09-22 17:28 +0530
+Warning: 192.168.. giving up on port because retransmission cap hit (10).
+Nmap scan report for local.airtelfiber.com (192.168..)
+Host is up (0.014s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+5555/tcp open  freeciv
+MAC Address: 78:BB:C1 (Servercom (India) Private Limited)
+
+Nmap scan report for 192.168..
+Host is up (0.074s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE
+6668/tcp open  irc
+MAC Address: FC:3C:D7: (Tuya Smart)
+
+Nmap scan report for 192.168..
+Host is up (0.041s latency).
+All 1000 scanned ports on 192.168.. are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: FE:51:D5: (Unknown)
+
+Nmap scan report for 192.168..
+Host is up (0.012s latency).
+Not shown: 975 closed tcp ports (reset)
+PORT      STATE    SERVICE
+21/tcp    filtered ftp
+23/tcp    filtered telnet
+25/tcp    filtered smtp
+80/tcp    filtered http
+111/tcp   filtered rpcbind
+199/tcp   filtered smux
+445/tcp   filtered microsoft-ds
+587/tcp   filtered submission
+722/tcp   filtered unknown
+995/tcp   filtered pop3s
+1124/tcp  filtered hpvmmcontrol
+1166/tcp  filtered qsm-remote
+1583/tcp  filtered simbaexpress
+1720/tcp  filtered h323q931
+2045/tcp  filtered cdfunc
+2179/tcp  filtered vmrdp
+2399/tcp  filtered fmpro-fdal
+3168/tcp  filtered poweronnud
+5009/tcp  filtered airport-admin
+6669/tcp  filtered irc
+8192/tcp  filtered sophos
+9103/tcp  filtered jetdirect
+10629/tcp filtered unknown
+49152/tcp open     unknown
+62078/tcp open     iphone-sync
+MAC Address: 2E:D7 (Unknown)
+
+Nmap scan report for 192.168..
+Host is up (0.066s latency).
+All 1000 scanned ports on 192.168.. are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 18:47:3D: (Chongqing Fugui Electronics)
+
+Nmap scan report for 192.168..
+Host is up (0.050s latency).
+All 1000 scanned ports on 192.168.. are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 26:49:96: (Unknown)
+
+Nmap scan report for 192.168..
+Host is up (0.00099s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+2869/tcp open  icslap
+
+Nmap done: 256 IP addresses (7 hosts up) scanned in 5233.63 seconds
 
 
 
 
 
-Capturing the packets using Wireshark for the TCP SYN Scan
+Analysing and capturing packets using Wireshark:
+Packet List(Filtered : tcp.flags.syn == 1)
+No.     Time        Source        Destination   Protocol Length  Info
+12878   166.224489  192.168..   192.168..   TCP      58      53713 ? 32768 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12886   166.621177  192.168..   192.168..   TCP      58      53715 ? 9002 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12889   167.161497  192.168..   192.168..   TCP      58      [TCP Retransmission] 53 ? 53906 [SYN, ACK] Seq=0 Ack=1 Win=29200 Len=0 MSS=1460
+12890   167.628243  192.168..   192.168..   TCP      58      53728 ? 22 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12891   167.629768  192.168..   192.168..   TCP      58      53717 ? 9002 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12893   168.360249  192.168..   192.168..  TCP      58      [TCP Retransmission] 53 ? 53908 [SYN, ACK] Seq=0 Ack=1 Win=29200 Len=0 MSS=1460
+12894   168.565549  192.168..   192.168..   TCP      58      [TCP Retransmission] 53 ? 53902 [SYN, ACK] Seq=0 Ack=1 Win=29200 Len=0 MSS=1460
+12895   168.649727  192.168..   192.168..   TCP      58      53718 ? 513 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12896   169.652855  192.168..   192.168..   TCP      58      [TCP Retransmission] 53 ? 53904 [SYN, ACK] Seq=0 Ack=1 Win=29200 Len=0 MSS=1460
+12897   169.760341  192.168..   192.168..   TCP      58      53717 ? 513 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12904   171.370865  192.168..   192.168..   TCP      58      [TCP Retransmission] 53 ? 53906 [SYN, ACK] Seq=0 Ack=1 Win=29200 Len=0 MSS=1460
+12906   171.678089  192.168..   192.168..   TCP      58      53715 ? 57294 [SYN] Seq=0 Win=1024 Len=0 MSS=1460
+12907   171.999276  192.168..   192.168..  TCP      58      
 
+
+These are the some of the packets captured
 

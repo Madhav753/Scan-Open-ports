@@ -1,0 +1,10 @@
+Task - 1
+Scan for Open Ports using Nmap
+
+
+
+
+
+Capturing the packets using Wireshark for the TCP SYN Scan
+
+
